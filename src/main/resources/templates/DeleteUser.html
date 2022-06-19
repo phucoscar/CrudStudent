@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>User Management</title>
+</head>
+
+<body>
+	<form th:action="@{/deleteUser/{id}(id=${id})}" method="POST">
+		<h1><b>Are you sure that you want to delete?</b></h1>
+		<a>
+			<button type="submit">Yes</button>
+		</a>
+		<a th:href="@{/viewUsers}">
+			<button type="button">No</button>
+		</a>
+	</form>
+
+</body>
+
+</html>

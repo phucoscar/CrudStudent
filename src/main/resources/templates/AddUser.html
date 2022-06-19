@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>User Management</title>
+</head>
+
+<body>
+	<form th:action="@{/addUser}" th:object="${user}" method="POST" style="width: 200px;">
+		<div>
+			<label for="name">Name</label>
+			<input type="text" th:field="*{name}" name="name" required>
+		</div>
+		<div>
+			<label for="address">Address</label>
+			<input type="text" th:field="*{address}" name="address" required>
+		</div>
+		<br>
+		<div style="display: inline-block;">
+			<button type="submit">Tạo mới</button>
+		</div>
+		<div style="display: inline-block;">
+			<a th:href="@{/viewUsers}">
+				<button type="button">Quay lại</button>
+			</a>
+		</div>
+	</form>
+</body>
+
+</html>
